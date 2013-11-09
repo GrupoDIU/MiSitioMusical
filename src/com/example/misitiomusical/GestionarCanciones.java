@@ -1,16 +1,15 @@
 package com.example.misitiomusical;
 
-import com.example.misitiomusical.Listeners.MiTabListener;
-import com.example.misitiomusical.fragmentoTabs.FragmentoTabAgregarCancion;
-import com.example.misitiomusical.fragmentoTabs.FragmentoTabBuscarCancion;
-
 import android.os.Bundle;
 import android.app.ActionBar;
 import android.app.Activity;
 import android.app.Fragment;
+import android.content.Intent;
 import android.text.AndroidCharacter;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
+import android.view.View;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
@@ -34,33 +33,7 @@ public class GestionarCanciones extends Activity {
 			        Log.i("AndroidTabsDemo", "Pulsada pestaña: " + tabId);
 			    }
 			});
-		/*
-		//Obtenemos una referencia a la actionbar
-	    ActionBar abar = getActionBar();
-	 
-	    //Establecemos el modo de navegación por pestañas
-	    abar.setNavigationMode(ActionBar.NAVIGATION_MODE_TABS);
-	 
-	    //Ocultamos si queremos el título de la actividad
-	    //abar.setDisplayShowTitleEnabled(false);
-	 
-	    //Creamos las pestañas
-	    ActionBar.Tab tab1 =abar.newTab().setText("Registrar");
-	 
-	    ActionBar.Tab tab2 =abar.newTab().setText("Buscar");
-	 
-	    //Creamos los fragments de cada pestaña
-	        Fragment tab1frag = new FragmentoTabAgregarCancion();
-	        Fragment tab2frag = new FragmentoTabBuscarCancion();
-	 
-	        //Asociamos los listener a las pestañas
-	        tab1.setTabListener(new MiTabListener(tab1frag));
-	        tab2.setTabListener(new MiTabListener(tab2frag));
-	 
-	        //Añadimos las pestañas a la action bar
-	        abar.addTab(tab1);
-	        abar.addTab(tab2);
-		*/
+		
 	}
 
 	@Override
@@ -69,5 +42,34 @@ public class GestionarCanciones extends Activity {
 		getMenuInflater().inflate(R.menu.gestionar_canciones, menu);
 		return true;
 	}
+	
+	/* (non-Javadoc)
+	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
+	 */
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// TODO Auto-generated method stub
+		switch(item.getItemId()){
+		  case R.id.action_agregar_cancion:
+			  agregarCancion();
+			  return true;
+		  case R.id.action_busqueda_avanzada:
+			  busquedaAvanzada();
+			  return true;
+		  default:
+			  return super.onOptionsItemSelected(item);
+		}
+		
+	}
 
+	private void busquedaAvanzada() {
+		// TODO Auto-generated method stub
+		Intent intent=new Intent(this,BusquedaAvanzadaActivity.class);
+		startActivity(intent);
+	}
+
+	public void agregarCancion(){
+		Intent intent =new Intent(this,AgregarCancionActivity.class);
+		startActivity(intent);
+	}
 }

@@ -22,7 +22,9 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
-        <activity android:name="reproducirm"></activity><activity android:name="com.example.misitiomusical.reg1" >
+        <activity android:name="com.example.misitiomusical.reproducirm" >
+        </activity>
+        <activity android:name="com.example.misitiomusical.reg1" >
         </activity>
         <activity android:name="com.example.misitiomusical.regmanager" >
         </activity>
@@ -40,7 +42,22 @@
             android:name="com.example.misitiomusical.GestionarCanciones"
             android:label="@string/title_activity_gestionar_canciones" >
         </activity>
-        
+        <activity
+            android:name="com.example.misitiomusical.AgregarCancionActivity"
+            android:label="@string/title_activity_agregar_cancion"
+            android:parentActivityName="com.example.misitiomusical.GestionarCanciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.misitiomusical.GestionarCanciones" />
+        </activity>
+        <activity
+            android:name="com.example.misitiomusical.BusquedaAvanzadaActivity"
+            android:label="@string/title_activity_busqueda_avanzada"
+            android:parentActivityName="com.example.misitiomusical.GestionarCanciones" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.misitiomusical.GestionarCanciones" />
+        </activity>
     </application>
 
 </manifest>

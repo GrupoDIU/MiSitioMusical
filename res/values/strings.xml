@@ -9,13 +9,15 @@
 
     <color name="blanco">#ffffff</color>
     <color name="negro">#000000</color>
-	<color name="yellow">#E5F415</color>
-	<color name="blue">#2015F4</color>
-	<color name="green">#008000</color>
-	<color name="lime">#00FF00</color>
-	<color name="skyblue">#00CCFF</color>
-	
+    <color name="yellow">#E5F415</color>
+    <color name="blue">#2015F4</color>
+    <color name="green">#008000</color>
+    <color name="lime">#00FF00</color>
+    <color name="skyblue">#00CCFF</color>
+
     <string name="title_activity_menu_manager">MainActivity</string>
     <string name="title_activity_gestionar_canciones">GestionarCanciones</string>
+    <string name="title_activity_agregar_cancion">MainActivity</string>
+    <string name="title_activity_busqueda_avanzada">MainActivity</string>
 
 </resources>

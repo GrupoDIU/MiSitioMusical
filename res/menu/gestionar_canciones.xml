@@ -5,7 +5,7 @@
         android:orderInCategory="100"
         android:showAsAction="never"
         android:title="Agregar cancion"
-		android:icon="@drawable/icono_agregar_musica"
+		android:icon="@drawable/icono_agregar_cancion"
         />
 	<item
         android:id="@+id/action_busqueda_avanzada"

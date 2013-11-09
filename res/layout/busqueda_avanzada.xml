@@ -39,8 +39,8 @@
         android:layout_height="29dp"
         android:layout_x="94dp"
         android:layout_y="34dp"
-        android:background="@color/negro"
-        android:popupBackground="@color/negro"
+        android:background="@color/blanco"
+        android:popupBackground="@color/blanco"
         android:textColor="@color/negro" />
 
     <TextView
@@ -53,13 +53,13 @@
         android:textSize="15dp" />
 
     <Spinner
-        android:id="@+id/spinnerAlbumes"
+        android:id="@+id/spinnerAlbumesBuscar"
         android:layout_width="202dp"
         android:layout_height="29dp"
         android:layout_x="94dp"
         android:layout_y="136dp"
-        android:background="@color/negro"
-        android:popupBackground="@color/negro"
+        android:background="@color/blanco"
+        android:popupBackground="@color/blanco"
         android:textColor="@color/negro" />
 
     <AutoCompleteTextView

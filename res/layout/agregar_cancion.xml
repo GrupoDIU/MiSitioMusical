@@ -19,25 +19,8 @@
         android:layout_height="33dp"
         android:layout_x="110dp"
         android:layout_y="137dp"
-        android:background="@color/negro"
-        android:popupBackground="@color/negro" />
-
-    <Button
-        android:id="@+id/buttonVerNovedades"
-        android:layout_width="170dp"
-        android:layout_height="wrap_content"
-        android:layout_x="23dp"
-        android:layout_y="242dp"
-        android:ems="10"
-        android:text="Importar" />
-
-    <Button
-        android:id="@+id/buttonGestionarAlbumes"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="217dp"
-        android:layout_y="249dp"
-        android:text="Guardar" />
+        android:background="@color/blanco"
+        android:popupBackground="@color/blanco" />
 
     <Spinner
         android:id="@+id/spinnerAlbumesAgrega"
@@ -45,8 +28,8 @@
         android:layout_height="30dp"
         android:layout_x="111dp"
         android:layout_y="80dp"
-        android:background="@color/negro"
-        android:popupBackground="@color/negro" />
+        android:background="@color/blanco"
+        android:popupBackground="@color/blanco" />
 
     <TextView
         android:id="@+id/textView2"
@@ -78,5 +61,22 @@
         android:text="Genero"
         android:textColor="@color/negro"
         android:textSize="15sp" />
+
+    <Button
+        android:id="@+id/buttonVerNovedades"
+        android:layout_width="170dp"
+        android:layout_height="wrap_content"
+        android:layout_x="22dp"
+        android:layout_y="216dp"
+        android:ems="10"
+        android:text="Importar" />
+
+    <Button
+        android:id="@+id/buttonGestionarAlbumes"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="207dp"
+        android:layout_y="218dp"
+        android:text="Guardar" />
 
 </AbsoluteLayout>
