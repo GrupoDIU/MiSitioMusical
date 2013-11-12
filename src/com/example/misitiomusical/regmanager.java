@@ -43,10 +43,10 @@ public class regmanager extends Activity {
         }
         }    
 	
-	public void lanzaratras(View view) {
+	/*public void lanzaratras(View view) {
         Intent i = new Intent(this, reg1.class );
         startActivity(i);
-  }    
+  }   */ 
 	
 	 
 

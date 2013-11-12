@@ -55,8 +55,6 @@ public class MainActivity extends Activity {
     
     
     
-    
-    
     public void lanzar(View view) {
         Intent i = new Intent(this, reg1.class );
         startActivity(i);

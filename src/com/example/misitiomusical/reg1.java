@@ -12,7 +12,7 @@ import android.widget.Toast;
 public class reg1 extends Activity {
 	private Spinner spinner1;
 	private Spinner spinner2;
-	private EditText et1,et2,et3,et4;
+	private EditText et1,et2;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -20,9 +20,9 @@ public class reg1 extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.registro);
 		et1=(EditText)findViewById(R.id.editTextUsuario);
-        et2=(EditText)findViewById(R.id.editTextClave);
-        et3=(EditText)findViewById(R.id.et3);
-        et4=(EditText)findViewById(R.id.et4);
+        et2=(EditText)findViewById(R.id.etCorreo);
+       
+       
 		
 		spinner1 = (Spinner) findViewById(R.id.spinner1);
         String []opciones={"Seleccionar", "Publico","Manager"};        
@@ -40,13 +40,24 @@ public class reg1 extends Activity {
 		String selec2=spinner2.getSelectedItem().toString();
 		String v1=et1.getText().toString();
         String v2=et2.getText().toString();
-        String v3=et3.getText().toString();
-        String v4=et4.getText().toString();
-		if(selec.equals("Seleccionar") || selec2.equals("Seleccionar") || v1.equals("") || v2.equals("") || v3.equals("") || v4.equals("")){
-        	Toast t = Toast.makeText(this, "por favor complete el formulario",
+       
+		if(selec.equals("Seleccionar")){
+        	Toast t = Toast.makeText(this, "Falta elegir el tipo de cuenta",
                     Toast.LENGTH_SHORT);
             t.show();
-        }else
+        }else if (selec2.equals("Seleccionar")){
+        	Toast t = Toast.makeText(this, "Falta elegir el sexo",
+                    Toast.LENGTH_SHORT);
+            t.show();
+        } else if(v1.equals("")){
+        	Toast t = Toast.makeText(this, "Falta Ingresar su nombre",
+                    Toast.LENGTH_SHORT);
+            t.show();
+        	} else if(v2.equals("")){
+        		Toast t = Toast.makeText(this, "Falta Ingresar su Correo",
+                        Toast.LENGTH_SHORT);
+                t.show();
+        	} else
 		if (selec.equals("Manager")) {
 			Intent i = new Intent(this, regmanager.class );
 	        startActivity(i);
@@ -59,9 +70,9 @@ public class reg1 extends Activity {
         
   }    
 	
-	public void lanzarorigen(View view) {
+	/*public void lanzarorigen(View view) {
         Intent i = new Intent(this, MainActivity.class );
         startActivity(i);
-  }    
+  } */
 
 }
