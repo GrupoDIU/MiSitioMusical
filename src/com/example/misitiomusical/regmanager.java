@@ -11,14 +11,16 @@ import android.widget.Toast;
 
 public class regmanager extends Activity {
 	private Spinner spinner1;
-	private EditText et1;
+	private EditText etNombreArtista,etUsuario2, etContra;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.registromanager);
-		et1=(EditText)findViewById(R.id.editTextUsuario);
+		etNombreArtista=(EditText)findViewById(R.id.etNombreArtistico);
+		etUsuario2=(EditText)findViewById(R.id.etUsuario);
+		etContra=(EditText)findViewById(R.id.etContra);
 		
 		spinner1 = (Spinner) findViewById(R.id.spinner1);
         String []opciones={"Seleccionar Genero", "Alternativo","Bachata", "Baladas", "Electronica", "Hip Hop", "Rock", "Salsa"};        
@@ -29,19 +31,47 @@ public class regmanager extends Activity {
 	
 	
 	public void lanzarfinal(View view) {
-		String v1=et1.getText().toString();
+		String Artista=etNombreArtista.getText().toString();
+		String Usuario=etNombreArtista.getText().toString();
+		String Contras=etNombreArtista.getText().toString();
 		String selec=spinner1.getSelectedItem().toString();
-		if(selec.equals("Seleccionar Genero") || v1.equals("")){
-        	Toast t = Toast.makeText(this, "por favor complete el formulario",
+		if(selec.equals("Seleccionar Genero")){
+        	Toast t = Toast.makeText(this, "Falta seleccionar el genero",
                     Toast.LENGTH_SHORT);
             t.show();
-        }else{
-        	 Intent i = new Intent(this, regfinal.class);
+		}else if(Artista.equals("")){
+			Toast t = Toast.makeText(this, "Falta ingresar su grupo musical",
+                    Toast.LENGTH_SHORT);
+            t.show();
+        } else if(Usuario.equals("")){
+        	Toast t = Toast.makeText(this, "Falta ingresar su usuario",
+                    Toast.LENGTH_SHORT);
+            t.show();
+        } else if(Contras.equals("")){
+        	Toast t = Toast.makeText(this, "Falta ingresar su Contraseña",
+                    Toast.LENGTH_SHORT);
+            t.show();
+        }
+		else{
+			
+			/*Toast t = Toast.makeText(this, "Bienvenido a mi Sitio Musical",
+                    Toast.LENGTH_SHORT);
+            t.show();
+			
+         Intent i = new Intent(this, regfinal.class);
 	     i.putExtra("cuenta", "manager");
-	     startActivity(i);
+	     startActivity(i); */
+	     
+	     Intent i = new Intent(this, MenuManagerActivity.class );
+	        startActivity(i);
 	     
         }
-        }    
+        }  
+	
+	
+	
+	
+	
 	
 	/*public void lanzaratras(View view) {
         Intent i = new Intent(this, reg1.class );

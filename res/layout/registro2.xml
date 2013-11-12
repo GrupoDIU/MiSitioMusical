@@ -11,14 +11,6 @@
         android:layout_margin="20dp"
         android:orientation="vertical" >
 
-        <TextView
-            android:id="@+id/textViewGestionarCanciones"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="10dp"
-            android:text="REGISTRO"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
@@ -28,11 +20,11 @@
             android:id="@+id/txt"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Usuario"
+            android:text="Nombre de Usuario"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/editTextUsuario"
+            android:id="@+id/etNombreArtistico"
             android:layout_width="235dp"
             android:layout_height="wrap_content"
             android:ems="10" >
@@ -48,21 +40,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/editTextClave"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:ems="10"
-            android:inputType="textPassword" />
-
-        <TextView
-            android:id="@+id/TextView01"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Vuelva a escribir su contraseña"
-            android:textAppearance="?android:attr/textAppearanceMedium" />
-
-        <EditText
-            android:id="@+id/et3"
+            android:id="@+id/etContrasenia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
@@ -75,13 +53,29 @@
         android:layout_height="wrap_content"
         android:layout_gravity="center_horizontal" >
 
-        <ImageButton
-            android:id="@+id/imageButton1"
+        <Button
+            android:id="@+id/button1"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
             android:onClick="guardar"
-            android:src="@drawable/guardarbtn" />
+            android:text="Crear mi Cuenta" />
 
     </LinearLayout>
+
+    <RelativeLayout
+        android:layout_width="fill_parent"
+        android:layout_height="135dp" >
+
+        <TextView
+            android:id="@+id/textView1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_centerVertical="true"
+            android:text="2/2"
+            android:textColor="#000000" />
+
+    </RelativeLayout>
 
 </LinearLayout>

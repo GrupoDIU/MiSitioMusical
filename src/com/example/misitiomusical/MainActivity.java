@@ -30,8 +30,8 @@ public class MainActivity extends Activity {
     }
     public void ingresarMenuPrincipal(View view){
     	Intent intent;
-    	EditText editTextUsuario=(EditText)findViewById(R.id.editTextUsuario);
-    	EditText editTextClave=(EditText)findViewById(R.id.editTextClave);
+    	EditText editTextUsuario=(EditText)findViewById(R.id.etNombreArtistico);
+    	EditText editTextClave=(EditText)findViewById(R.id.etContrasenia);
     	String usuario =(String)editTextUsuario.getText().toString();
     	String clave =(String)editTextClave.getText().toString();
     	
