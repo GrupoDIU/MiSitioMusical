@@ -19,7 +19,7 @@ public class reg1 extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.registro);
-		et1=(EditText)findViewById(R.id.etNombreArtistico);
+		et1=(EditText)findViewById(R.id.etNombreUsuario);
         et2=(EditText)findViewById(R.id.etCorreo);
        
        

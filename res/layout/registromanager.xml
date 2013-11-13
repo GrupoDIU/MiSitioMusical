@@ -26,29 +26,37 @@
             android:layout_width="match_parent"
             android:layout_height="wrap_content" >
 
-            <RadioGroup
-                android:id="@+id/radioGroup1"
+            <LinearLayout
                 android:layout_width="wrap_content"
-                android:layout_height="wrap_content" >
+                android:layout_height="match_parent" >
 
-                <RadioButton
-                    android:id="@+id/rdGrupoMusical"
+                <RadioGroup
+                    android:id="@+id/radioGroup1"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:checked="true"
-                    android:text="Grupo Musical" />
-            </RadioGroup>
+                    android:orientation="horizontal" >
 
-            <RadioButton
-                android:id="@+id/rdSolista2"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Solista" />
+                    <RadioButton
+                        android:id="@+id/rdGrupoMusical"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:checked="true"
+                        android:text="Grupo Musical" />
+
+                    <RadioButton
+                        android:id="@+id/rdSolista2"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="Solista" />
+
+                </RadioGroup>
+
+            </LinearLayout>
 
         </LinearLayout>
 
         <EditText
-            android:id="@+id/etNombreArtistico"
+            android:id="@+id/etNombreUsuario"
             android:layout_width="235dp"
             android:layout_height="wrap_content"
             android:layout_marginBottom="5dp"

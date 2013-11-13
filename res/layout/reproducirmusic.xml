@@ -21,7 +21,9 @@
             <TabWidget
                 android:id="@android:id/tabs"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content" >
+                android:layout_height="wrap_content"
+                android:background="@color/skyblue" >
+
             </TabWidget>
 
             <FrameLayout
@@ -33,6 +35,7 @@
                     android:id="@+id/tab1"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
+                    android:background="@color/skyblue"
                     android:orientation="vertical" >
 
                     <LinearLayout
@@ -69,7 +72,8 @@
                     android:id="@+id/tab2"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:background="@color/skyblue" >
                     
                     <LinearLayout
                         android:id="@+id/LinearLayout1"
@@ -97,7 +101,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:text="Alex Ubago"
-                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textSize="15sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -106,7 +111,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView1"
                                 android:text="Album: Mentiras Sinceras"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/txt"
@@ -115,7 +121,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView2"
                                 android:text="Detras de un cristal"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/textView4"
@@ -124,7 +131,8 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentLeft="true"
                                 android:text="3:41  05/02/2013"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                         </RelativeLayout>
 
@@ -171,7 +179,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:text="Camila"
-                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textSize="15sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -180,7 +189,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView1"
                                 android:text="Album:Entre tus alas         "
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall" 
+                                android:textSize="12sp"/>
 
                             <TextView
                                 android:id="@+id/txt"
@@ -189,7 +199,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView2"
                                 android:text="Entre tus alas"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/textView4"
@@ -198,7 +209,8 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentLeft="true"
                                 android:text="4:00   10/03/2013"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                         </RelativeLayout>
 
@@ -245,7 +257,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:text="Linking Park"
-                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textSize="15sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -254,7 +267,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView1"
                                 android:text="Album: Meteora                  "
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/txt"
@@ -263,7 +277,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView2"
                                 android:text="Foreword"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/textView4"
@@ -272,7 +287,8 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentLeft="true"
                                 android:text="3:08   15/06/2013"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                         </RelativeLayout>
 
@@ -319,7 +335,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_alignParentTop="true"
                                 android:text="Reik"
-                                android:textAppearance="?android:attr/textAppearanceMedium" />
+                                android:textAppearance="?android:attr/textAppearanceMedium"
+                                android:textSize="15sp" />
 
                             <TextView
                                 android:id="@+id/textView2"
@@ -328,7 +345,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView1"
                                 android:text="Album: Te fuiste de aqui  "
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                             <TextView
                                 android:id="@+id/txt"
@@ -337,7 +355,8 @@
                                 android:layout_alignParentLeft="true"
                                 android:layout_below="@+id/textView2"
                                 android:text="Te fuiste de aqui"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall" 
+                                android:textSize="12sp"/>
 
                             <TextView
                                 android:id="@+id/textView4"
@@ -346,7 +365,8 @@
                                 android:layout_alignParentBottom="true"
                                 android:layout_alignParentLeft="true"
                                 android:text="3:50   20/10/2013"
-                                android:textAppearance="?android:attr/textAppearanceSmall" />
+                                android:textAppearance="?android:attr/textAppearanceSmall"
+                                android:textSize="12sp" />
 
                         </RelativeLayout>
 
@@ -374,7 +394,8 @@
                     android:id="@+id/tab3"
                     android:layout_width="match_parent"
                     android:layout_height="match_parent"
-                    android:orientation="vertical" >
+                    android:orientation="vertical"
+                    android:background="@color/skyblue" >
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>

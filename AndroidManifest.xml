@@ -58,6 +58,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.misitiomusical.GestionarCanciones" />
         </activity>
+        <activity android:name="ContraOlvidada"></activity>
     </application>
 
 </manifest>

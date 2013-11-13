@@ -24,33 +24,26 @@
             android:id="@+id/textViewGestionarCanciones"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_gravity="center"
             android:layout_marginBottom="20dp"
-            android:text="Usuario"
+            android:text="Iniciar sesion"
             android:textAppearance="?android:attr/textAppearanceLarge"
             android:textColor="@color/negro" />
 
         <EditText
-            android:id="@+id/etNombreArtistico"
+            android:id="@+id/etNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/editTextUsuario"
             android:textColorHint="@color/blue" />
 
-        <TextView
-            android:id="@+id/textView2"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_marginBottom="20dp"
-            android:layout_marginTop="10dp"
-            android:text="Contraseña"
-            android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/negro" />
-
         <EditText
             android:id="@+id/etContrasenia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:layout_marginBottom="25dp"
+            android:layout_marginTop="20dp"
             android:ems="10"
             android:hint="@string/editTextClave"
             android:inputType="textPassword"
@@ -66,21 +59,25 @@
             android:text="Aceptar" />
 
         <Button
-            android:id="@+id/buttonGestionarAlbumes"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="5dp"
-            android:text="Olvido su Contraseña" />
-
-        <Button
             android:id="@+id/buttonVerPerfil"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:onClick="lanzar"
-            android:text="Registrarse" />
+            android:text="Registrate" />
+
     </LinearLayout>
+
+    <TextView
+        android:id="@+id/textView1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/linearLayout1"
+        android:layout_centerHorizontal="true"
+        android:onClick="lanzar2"
+        android:text="¿Olvido su contraseña?"
+        android:textAppearance="?android:attr/textAppearanceMedium"
+        android:textColor="#000000" />
 
 </RelativeLayout>

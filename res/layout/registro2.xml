@@ -24,7 +24,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/etNombreArtistico"
+            android:id="@+id/etNombreUsuario"
             android:layout_width="235dp"
             android:layout_height="wrap_content"
             android:ems="10" >

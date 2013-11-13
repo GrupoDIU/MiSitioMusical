@@ -30,7 +30,7 @@ public class MainActivity extends Activity {
     }
     public void ingresarMenuPrincipal(View view){
     	Intent intent;
-    	EditText editTextUsuario=(EditText)findViewById(R.id.etNombreArtistico);
+    	EditText editTextUsuario=(EditText)findViewById(R.id.etNombreUsuario);
     	EditText editTextClave=(EditText)findViewById(R.id.etContrasenia);
     	String usuario =(String)editTextUsuario.getText().toString();
     	String clave =(String)editTextClave.getText().toString();
@@ -57,6 +57,11 @@ public class MainActivity extends Activity {
     
     public void lanzar(View view) {
         Intent i = new Intent(this, reg1.class );
+        startActivity(i);
+  }
+    
+    public void lanzar2(View view) {
+        Intent i = new Intent(this, ContraOlvidada.class );
         startActivity(i);
   }    
     
