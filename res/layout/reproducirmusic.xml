@@ -43,12 +43,14 @@
                         android:layout_height="wrap_content"
                         android:orientation="vertical" >
 
-                        <ImageView
-                            android:id="@+id/imageView2"
+                        <TextView
+                            android:id="@+id/textView3"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_horizontal"
-                            android:src="@drawable/bienvenido" />
+                            android:text="Bienvenido"
+                            android:textColor="#000000"
+                            android:textSize="52sp" />
 
                     </LinearLayout>
 

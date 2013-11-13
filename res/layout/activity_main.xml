@@ -51,7 +51,7 @@
 
         <Button
             android:id="@+id/gestionarMusica"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
@@ -60,24 +60,21 @@
 
         <Button
             android:id="@+id/buttonVerPerfil"
-            android:layout_width="wrap_content"
+            android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
             android:onClick="lanzar"
             android:text="Registrate" />
 
-    </LinearLayout>
+        <Button
+            android:id="@+id/button1"
+            android:layout_width="fill_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:onClick="lanzar2"
+            android:text="¿Olvido su contraseña?" />
 
-    <TextView
-        android:id="@+id/textView1"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_below="@+id/linearLayout1"
-        android:layout_centerHorizontal="true"
-        android:onClick="lanzar2"
-        android:text="¿Olvido su contraseña?"
-        android:textAppearance="?android:attr/textAppearanceMedium"
-        android:textColor="#000000" />
+    </LinearLayout>
 
 </RelativeLayout>
