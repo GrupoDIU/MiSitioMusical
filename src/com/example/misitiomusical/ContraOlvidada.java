@@ -18,7 +18,7 @@ public class ContraOlvidada extends Activity {
 		et1=(EditText)findViewById(R.id.etCorreo1);
 	}
 	
-	void lanza3(View view){
+	public void lanza3(View view){
 		String v1=et1.getText().toString();
 	
 		if(v1.equals("")){
