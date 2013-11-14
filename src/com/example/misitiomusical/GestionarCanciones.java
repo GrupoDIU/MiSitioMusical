@@ -27,12 +27,18 @@ import android.widget.TabHost.OnTabChangeListener;
 public class GestionarCanciones extends Activity {
 	private static final int constant_tab_cancion = 0;
 	private static final int constant_tab_album = 1;
+	public static final String lista_canciones="listaCanciones";
+	public static final String lista_albumes="listaAlbumes";
 	private ListView lista; 
+	MediaPlayer mp=new MediaPlayer();
+	TabHost tabHost;
+	ArrayList<Lista_entrada_albumes> datos;
+	ArrayList<Lista_entrada_canciones> datosCanciones;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_gestionar_canciones);
-		TabHost tabHost=(TabHost)findViewById(android.R.id.tabhost);
+		tabHost=(TabHost)findViewById(android.R.id.tabhost);
 		tabHost.setup();
 	       tabHost.addTab(tabHost.newTabSpec("tabListaCanciones").setIndicator( 
 	          "Canciones", null).setContent(R.id.tabListaCanciones));
@@ -98,15 +104,15 @@ public class GestionarCanciones extends Activity {
 	}
 
 	protected void cargarListaCanciones() {
-		ArrayList<Lista_entrada_canciones> datos = new ArrayList<Lista_entrada_canciones>();  
+		datosCanciones = new ArrayList<Lista_entrada_canciones>();  
 		
-		datos.add(new Lista_entrada_canciones("una rosa en la playa", "Duracion: 5:00 min"));
-        datos.add(new Lista_entrada_canciones( "estoy loco loco", "Duracion: 4:30 min"));
-        datos.add(new Lista_entrada_canciones( "muero por ti", "Duracion: 4:00 min"));
-        datos.add(new Lista_entrada_canciones( "suicida", "Duracion: 3:30 min"));
+		datosCanciones.add(new Lista_entrada_canciones("una rosa en la playa", "Duracion: 5:00 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "estoy loco loco", "Duracion: 4:30 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "muero por ti", "Duracion: 4:00 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "suicida", "Duracion: 3:30 min"));
        
         lista = (ListView) findViewById(R.id.tabListaCanciones);
-        lista.setAdapter(new Lista_adaptador(this, R.layout.modelo_cancion, datos){
+        lista.setAdapter(new Lista_adaptador(this, R.layout.modelo_cancion, datosCanciones){
 			@Override
 			public void onEntrada(Object entrada, View view) {
 		        if (entrada != null) {
@@ -127,12 +133,14 @@ public class GestionarCanciones extends Activity {
 			@Override
 			public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
 				Lista_entrada_canciones elegido = (Lista_entrada_canciones) pariente.getItemAtPosition(posicion); 
-                if(elegido.get_textoEncima().equalsIgnoreCase("una rosa en la playa")){
-                	MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.rosa_playa);
+				if(mp.isPlaying())
+            		mp.stop();
+				if(elegido.get_textoEncima().equalsIgnoreCase("una rosa en la playa")){
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.rosa_playa);
                     mp.start();
                 }
                 else if(elegido.get_textoEncima().equalsIgnoreCase("estoy loco loco")){
-                	MediaPlayer mp = MediaPlayer.create(getApplicationContext(), R.raw.locoloco);
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.locoloco);
                     mp.start();
                 }
                 CharSequence texto = "Seleccionado: " + elegido.get_textoDebajo();
@@ -171,7 +179,16 @@ public class GestionarCanciones extends Activity {
 	private void busquedaAvanzada() {
 		// TODO Auto-generated method stub
 		Intent intent=new Intent(this,BusquedaAvanzadaActivity.class);
+		Bundle bundle = new Bundle();
+		
+		if(tabHost.getTabWidget().getTabCount()==0)
+			bundle.putParcelableArrayList(lista_canciones, datosCanciones);
+		else
+			bundle.putParcelableArrayList(lista_albumes, datos);
+		intent.putExtras(bundle);
 		startActivity(intent);
+		/*Bundle getBundle = this.getIntent().getExtras();
+		List<Channel> channelsList = getBundle.getParcelableArrayList("channel");*/
 	}
 
 	public void agregarCancion(){
