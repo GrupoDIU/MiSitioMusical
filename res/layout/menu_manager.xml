@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MenuManagerActivity" 
-    android:background="@color/skyblue"
+    android:background="@drawable/musica_bajo_el_mar"
     >
 
     <Button
@@ -19,17 +19,20 @@
         android:layout_alignBottom="@+id/buttonGestionarAlbumes"
         android:layout_alignRight="@+id/gestionarMusica"
         android:drawableTop="@drawable/icono_novedades"
-        android:text="Novedades" />
+        android:text="Novedades"
+        android:textColor="@color/blanco" />
 
-    <TextView
-        android:id="@+id/textView1"
+    <Button
+        android:id="@+id/buttonGestionarAlbumes"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
-        android:text="Bienvenido! usuario: manager"
-        android:textSize="20dp" />
+        android:layout_alignLeft="@+id/buttonVerPerfil"
+        android:layout_below="@+id/buttonVerPerfil"
+        android:layout_marginTop="44dp"
+        android:drawableTop="@drawable/icono_amigos"
+        android:text="Amigos"
+        android:textColor="@color/blanco" />
 
     <Button
         android:id="@+id/gestionarMusica"
@@ -38,11 +41,11 @@
         android:layout_height="wrap_content"
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
-        android:layout_marginRight="21dp"
-        android:layout_marginTop="43dp"
+        android:layout_marginTop="27dp"
         android:drawableTop="@drawable/gestionar_musica"
         android:onClick="gestionarCanciones"
-        android:text="Musica" />
+        android:text="Musica"
+        android:textColor="@color/blanco" />
 
     <Button
         android:id="@+id/buttonVerPerfil"
@@ -53,17 +56,18 @@
         android:layout_alignBottom="@+id/gestionarMusica"
         android:layout_alignLeft="@+id/textView1"
         android:drawableTop="@drawable/icono_perfil"
-        android:text="Perfil" />
+        android:text="Perfil"
+        android:textColor="@color/blanco" />
 
-    <Button
-        android:id="@+id/buttonGestionarAlbumes"
-        style="?android:attr/buttonStyleSmall"
+    <TextView
+        android:id="@+id/textView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonVerPerfil"
-        android:layout_below="@+id/buttonVerPerfil"
-        android:layout_marginTop="70dp"
-        android:drawableTop="@drawable/icono_amigos"
-        android:text="Amigos" />
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="15dp"
+        android:text="Bienvenido! usuario: manager"
+        android:textColor="@color/lime"
+        android:textSize="20dp" />
 
 </RelativeLayout>

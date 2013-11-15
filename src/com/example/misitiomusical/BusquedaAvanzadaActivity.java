@@ -1,7 +1,10 @@
 package com.example.misitiomusical;
 
+import java.util.ArrayList;
+
 import android.os.Bundle;
 import android.app.Activity;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.ArrayAdapter;
@@ -15,6 +18,9 @@ public class BusquedaAvanzadaActivity extends Activity {
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
+		Bundle bundle=getIntent().getExtras();
+		ArrayList<Lista_entrada_canciones> listaCanciones=(ArrayList<Lista_entrada_canciones>) bundle.getSerializable(GestionarCanciones.lista_canciones);
+		Log.i(listaCanciones.get(0).get_textoEncima()," Resultado de listaCanciones");
 		setContentView(R.layout.busqueda_avanzada);
 		Spinner spinnerAlbumes = (Spinner) findViewById(R.id.spinnerAlbumesBuscar);
     	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
