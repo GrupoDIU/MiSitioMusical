@@ -181,10 +181,9 @@ public class GestionarCanciones extends Activity {
 		Intent intent=new Intent(this,BusquedaAvanzadaActivity.class);
 		Bundle bundle = new Bundle();
 		
-		if(tabHost.getTabWidget().getTabCount()==0)
-			bundle.putParcelableArrayList(lista_canciones, datosCanciones);
-		else
-			bundle.putParcelableArrayList(lista_albumes, datos);
+		//if(tabHost.getTabWidget().getTabCount()==0)
+		bundle.putSerializable(lista_canciones, datosCanciones);
+		bundle.putSerializable(lista_albumes, datos);
 		intent.putExtras(bundle);
 		startActivity(intent);
 		/*Bundle getBundle = this.getIntent().getExtras();
