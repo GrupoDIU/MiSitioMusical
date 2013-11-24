@@ -1,17 +1,36 @@
 package com.example.misitiomusical;
 
+import java.util.ArrayList;
+import java.util.HashMap;
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
 import android.net.Uri;
 import android.os.Bundle;
+import android.text.Editable;
+import android.text.TextWatcher;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
+import android.widget.ArrayAdapter;
+import android.widget.EditText;
+import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
 public class reproducirm extends Activity {
+	// List view
+    private ListView lv;
+     
+    // Listview Adapter
+    ArrayAdapter<String> adapter;
+     
+    // Search EditText
+    EditText inputSearch;
+     
+     
+    // ArrayList for Listview
+    ArrayList<HashMap<String, String>> productList;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -48,6 +67,50 @@ public class reproducirm extends Activity {
 		        Log.i("AndroidTabsDemo", "Pulsada pestaña: " + tabId);
 		    }
 		});
+		
+		//aqui comienza el codigo para implementar la busqueda
+		
+        // Listview Data
+        String products[] = {"A ti", "A volar", "A ciegas", "A quien tu decidiste amar", "Alive",
+                                "A contra luz", "A cada paso", "Baby Baby", "Baby Eyes", "Caballito",
+                                "Celos", "Daisy", "Dale", "Dale Caliente", "Detras de un Cristal", "Enamorarse",
+                                "Entre tus alas", "Foreword", "Gone", "Gracias", "Imaginate", "Mar de amor", 
+                                "Mi pobre corazon", "Te fuiste de aqui", "Regalame un beso", "Si tu me quisieras",
+                                "Yo solo quiero", "Ya no", "Ya te amo", "Yo te sigo queriendo", "Veo", "Zun DaDa"};
+         
+        lv = (ListView) findViewById(R.id.list_view);
+        inputSearch = (EditText) findViewById(R.id.inputSearch);
+         
+        // Adding items to listview
+        adapter = new ArrayAdapter<String>(this, R.layout.list_item, R.id.product_name, products);
+        lv.setAdapter(adapter);
+         
+        /**
+         * Enabling Search Filter
+         * */
+        inputSearch.addTextChangedListener(new TextWatcher() {
+             
+            @Override
+            public void onTextChanged(CharSequence cs, int arg1, int arg2, int arg3) {
+                // When user changed the Text
+                reproducirm.this.adapter.getFilter().filter(cs);   
+            }
+             
+            @Override
+            public void beforeTextChanged(CharSequence arg0, int arg1, int arg2,
+                    int arg3) {
+                // TODO Auto-generated method stub
+                 
+            }
+             
+            @Override
+            public void afterTextChanged(Editable arg0) {
+                // TODO Auto-generated method stub                          
+            }
+        });
+		
+		
+		
 
 }
 	

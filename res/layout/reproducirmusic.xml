@@ -402,6 +402,22 @@
                     android:layout_height="match_parent"
                     android:orientation="vertical"
                     android:background="@color/skyblue" >
+                    
+                    <!-- Editext for Search -->
+                    
+                   
+				    <EditText android:id="@+id/inputSearch"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content"
+				        android:hint="Ingrese cancion"
+				        android:inputType="textVisiblePassword"/>
+				  
+				    <!-- List View -->
+				    <ListView
+				        android:id="@+id/list_view"
+				        android:layout_width="fill_parent"
+				        android:layout_height="wrap_content" />
+                    
                 </LinearLayout>
             </FrameLayout>
         </LinearLayout>
