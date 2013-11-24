@@ -143,6 +143,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:onClick="ejecutarAlex"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -221,6 +222,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:onClick="ejecutarCamila"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -299,6 +301,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:onClick="ejecutarLinking"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -377,6 +380,7 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
+                            android:onClick="ejecutarReik"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
