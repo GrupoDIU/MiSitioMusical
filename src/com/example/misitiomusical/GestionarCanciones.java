@@ -156,7 +156,7 @@ public class GestionarCanciones extends Activity {
                 toast.show();
 			}
         });
-        lista.setOnItemLongClickListener(new OnItemLongClickListener() {
+        /*lista.setOnItemLongClickListener(new OnItemLongClickListener() {
 
 			@Override
 			public boolean onItemLongClick(AdapterView<?> arg0, View vista,
@@ -168,9 +168,10 @@ public class GestionarCanciones extends Activity {
 				return true;
 			}
         	
-		});
-        //registerForContextMenu(this.lista);
+		});*/
+        registerForContextMenu(this.lista);
 	}
+	/*
 	private ActionMode.Callback modeCallBack = new ActionMode.Callback() {
 		   public boolean onPrepareActionMode(ActionMode mode, Menu menu){   
 		    return false;
@@ -206,9 +207,9 @@ public class GestionarCanciones extends Activity {
 		   }
 		};
 
-
+*/
 	
-	/*@Override
+	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
 		getMenuInflater().inflate(R.menu.gestionar_canciones, menu);
@@ -216,11 +217,11 @@ public class GestionarCanciones extends Activity {
 	}
 	
 	
-	 (non-Javadoc)
-	 * @see android.app.Activity#onContextItemSelected(android.view.MenuItem)
+
 	
 	@Override
 	public boolean onContextItemSelected(MenuItem item) {
+		
 		switch (item.getItemId()) {
 	      case R.id.gestionar_canciones_pausar:
 	        mp.pause();
@@ -230,27 +231,26 @@ public class GestionarCanciones extends Activity {
 	    	  CharSequence texto = "Cancion Eliminada!!";
               Toast toast = Toast.makeText(GestionarCanciones.this, texto, Toast.LENGTH_LONG);
               toast.show();
+              datosCanciones.remove(posicionActual);
+              ((BaseAdapter)lista.getAdapter()).notifyDataSetChanged();
 	         return true;
 	 
 	      default:
 	         return super.onOptionsItemSelected(item);
 	      }
-	} */
+	} 
 
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onCreateContextMenu(android.view.ContextMenu, android.view.View, android.view.ContextMenu.ContextMenuInfo)
-	 */
 	@Override
 	public void onCreateContextMenu(ContextMenu menu, View v,
 			ContextMenuInfo menuInfo) {
 		super.onCreateContextMenu(menu, v, menuInfo);
-	    MenuInflater inflater = getMenuInflater();
-	    inflater.inflate(R.menu.menu_contextual_opciones_cancion, menu);
+		if(v.getId()==R.id.tabListaCanciones){
+			MenuInflater inflater = getMenuInflater();
+			inflater.inflate(R.menu.menu_contextual_opciones_cancion, menu);
+		}
 	}
 
-	/* (non-Javadoc)
-	 * @see android.app.Activity#onOptionsItemSelected(android.view.MenuItem)
-	 */
+
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// TODO Auto-generated method stub
