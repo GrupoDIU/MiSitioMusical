@@ -1,26 +1,38 @@
 package com.example.misitiomusical;
 
 import java.util.ArrayList;
+import java.util.Calendar;
 
 import android.os.Bundle;
 import android.app.Activity;
+import android.app.DatePickerDialog;
+import android.app.Dialog;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.DatePicker;
 import android.widget.Spinner;
+import android.widget.TextView;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.content.Intent;
 import android.os.Build;
 
 public class BusquedaAvanzadaActivity extends Activity {
-
+	private TextView fechaDesde;    
+    private int mYear;    
+    private int mMonth;    
+    private int mDay;    
+    static final int DATE_DIALOG_ID = 0;
+    ArrayList<Lista_entrada_canciones> lista_canciones;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		Bundle bundle=getIntent().getExtras();
-		ArrayList<Lista_entrada_canciones> listaCanciones=(ArrayList<Lista_entrada_canciones>) bundle.getSerializable(GestionarCanciones.lista_canciones);
-		Log.i(listaCanciones.get(0).get_textoEncima()," Resultado de listaCanciones");
+		lista_canciones=(ArrayList<Lista_entrada_canciones>) bundle.getSerializable(GestionarCanciones.lista_canciones);
+		Log.i(lista_canciones.get(0).get_textoEncima()," Resultado de lista de canciones");
 		setContentView(R.layout.busqueda_avanzada);
 		Spinner spinnerAlbumes = (Spinner) findViewById(R.id.spinnerAlbumesBuscar);
     	ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this,
@@ -33,7 +45,20 @@ public class BusquedaAvanzadaActivity extends Activity {
     	        R.array.generos_array, android.R.layout.simple_spinner_item);
     	adapterGeneros.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
     	spinnerGeneros.setAdapter(adapterGeneros);
-		// Show the Up button in the action bar.
+		
+    	// capture our View elements        
+    	fechaDesde = (TextView) findViewById(R.id.etUsuario);        
+    	fechaDesde.setKeyListener(null);
+    	// get the current date        
+    	final Calendar c = Calendar.getInstance();        
+    	mYear = c.get(Calendar.YEAR);        
+    	mMonth = c.get(Calendar.MONTH);        
+    	mDay = c.get(Calendar.DAY_OF_MONTH);        
+    	// display the current date (this method is below)        
+    	updateDisplay();    
+    	
+    	
+    	// Show the Up button in the action bar.
 		setupActionBar();
 	}
 
@@ -70,5 +95,48 @@ public class BusquedaAvanzadaActivity extends Activity {
 		}
 		return super.onOptionsItemSelected(item);
 	}
-
+	 // updates the date in the TextView    
+    private void updateDisplay() {        
+    	fechaDesde.setText(            
+    			new StringBuilder()                    
+    			// Month is 0 based so add 1                    
+    			.append(mMonth + 1).append("-")                    
+    			.append(mDay).append("-")                    
+    			.append(mYear).append(" "));    
+    }
+    
+    
+    @Override
+    protected Dialog onCreateDialog(int id) {    
+    	switch (id) {   
+    		case DATE_DIALOG_ID:        
+    			return new DatePickerDialog(this,                    
+    					mDateSetListener,                    
+    					mYear, mMonth, mDay);    
+    			}    
+    	return null;
+    	}
+    
+    // the callback received when the user "sets" the date in the dialog    
+    private DatePickerDialog.OnDateSetListener mDateSetListener =            
+    	new DatePickerDialog.OnDateSetListener() {                
+    	public void onDateSet(DatePicker view, int year,                                       
+    			int monthOfYear, int dayOfMonth) {                    
+    		mYear = year;                    
+    		mMonth = monthOfYear;                    
+    		mDay = dayOfMonth;                    
+    		updateDisplay();                
+    		}            
+    	};
+    public  void cambiarFecha(View view){
+    	showDialog(DATE_DIALOG_ID);  
+    }
+    public void buscarCanciones(View view){
+    	
+    	Intent intent=new Intent(this,GestionarCanciones.class);
+    	Bundle bundle = new Bundle();
+    	bundle.putSerializable(GestionarCanciones.lista_canciones,lista_canciones);
+    	intent.putExtras(bundle);
+    	startActivity(intent);
+    }
 }

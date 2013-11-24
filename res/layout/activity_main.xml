@@ -40,8 +40,8 @@
             android:layout_height="wrap_content"
             android:ems="10"
             android:hint="@string/editTextUsuario"
-            android:textColor="@color/blanco"
-            android:textColorHint="@color/blanco" />
+            android:textColor="@color/negro"
+             />
 
         <EditText
             android:id="@+id/etContrasenia"
@@ -52,8 +52,8 @@
             android:ems="10"
             android:hint="@string/editTextClave"
             android:inputType="textPassword"
-            android:textColor="@color/blanco"
-            android:textColorHint="@color/blanco" />
+            android:textColor="@color/negro"
+            />
 
         <Button
             android:id="@+id/gestionarMusica"

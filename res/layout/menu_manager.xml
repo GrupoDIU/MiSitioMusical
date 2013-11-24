@@ -42,7 +42,7 @@
         android:layout_alignRight="@+id/textView1"
         android:layout_below="@+id/textView1"
         android:layout_marginTop="27dp"
-        android:drawableTop="@drawable/gestionar_musica"
+        android:drawableTop="@drawable/icono_canciones"
         android:onClick="gestionarCanciones"
         android:text="Musica"
         android:textColor="@color/blanco" />
