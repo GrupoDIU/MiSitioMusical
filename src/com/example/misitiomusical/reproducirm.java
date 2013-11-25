@@ -2,9 +2,11 @@ package com.example.misitiomusical;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+
 import android.app.Activity;
 import android.content.Intent;
 import android.content.res.Resources;
+import android.media.MediaPlayer;
 import android.net.Uri;
 import android.os.Bundle;
 import android.text.Editable;
@@ -13,13 +15,15 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.ArrayAdapter;
+import android.widget.Button;
 import android.widget.EditText;
 import android.widget.ListView;
 import android.widget.TabHost;
 import android.widget.TabHost.OnTabChangeListener;
 
 public class reproducirm extends Activity {
-	// List view
+	
+	
     private ListView lv;
      
     // Listview Adapter
@@ -121,6 +125,9 @@ public class reproducirm extends Activity {
 		return true;
 	}
 	
+	/*
+	 //Aqui intento reproducir los archivos con el mismo android
+	
 	public void ejecutarAlex(View v) {
         Intent intent = new Intent(android.content.Intent.ACTION_VIEW);
         Uri data = Uri.parse("file:///sdcard" + "/detras_de_un_cristal.mp3");
@@ -148,4 +155,37 @@ public class reproducirm extends Activity {
         intent.setDataAndType(data, "audio/mp3");
         startActivity(intent);
     }
+	
+	
+	
+	*/
+	
+    
+    //Aqui intento pasar parametros a otra actividad
+    
+    public void lanzarAlex(View view) {
+    	 Intent i = new Intent(this, reproductorAudio.class);
+         i.putExtra("direccion", "detras_de_un_cristal");
+         startActivity(i);
+  }    
+    
+    public void lanzarCamila(View view) {
+   	 Intent i = new Intent(this, reproductorAudio.class);
+        i.putExtra("direccion", "entre_tus_alas");
+        startActivity(i);
+ }    
+    
+    public void lanzarLinking(View view) {
+   	 Intent i = new Intent(this, reproductorAudio.class);
+        i.putExtra("direccion", "foreword");
+        startActivity(i);
+ }    
+    
+    
+    public void lanzarReik(View view) {
+   	 Intent i = new Intent(this, reproductorAudio.class);
+        i.putExtra("direccion", "te_fuiste_de_aqui");
+        startActivity(i);
+ }    
+	
 }

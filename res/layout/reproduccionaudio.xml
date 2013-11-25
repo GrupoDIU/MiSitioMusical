@@ -6,11 +6,13 @@
     android:orientation="vertical" >
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="20dp"
-        android:text="TextView" />
+        android:text="TextView"
+        android:textColor="@color/blanco"
+        android:textSize="22sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -34,21 +36,24 @@
         android:layout_marginTop="20dp" >
 
         <ImageButton
-            android:id="@+id/imageButton3"
+            android:id="@+id/btnPausa"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="pausar"
             android:src="@drawable/pausa" />
 
         <ImageButton
-            android:id="@+id/imageButton1"
+            android:id="@+id/btnPlay"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="iniciar"
             android:src="@drawable/play2" />
 
         <ImageButton
-            android:id="@+id/imageButton2"
+            android:id="@+id/btnDetener"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:onClick="detener"
             android:src="@drawable/detener" />
 
     </LinearLayout>

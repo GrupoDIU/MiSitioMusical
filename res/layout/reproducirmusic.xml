@@ -97,7 +97,7 @@
                             android:gravity="center_horizontal" >
 
                             <TextView
-                                android:id="@+id/textView1"
+                                android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
@@ -111,7 +111,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
-                                android:layout_below="@+id/textView1"
+                                android:layout_below="@+id/tv1"
                                 android:text="Album: Mentiras Sinceras"
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:textSize="12sp" />
@@ -139,11 +139,11 @@
                         </RelativeLayout>
 
                         <ImageButton
-                            android:id="@+id/imageButton1"
+                            android:id="@+id/btnPlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:onClick="ejecutarAlex"
+                            android:onClick="lanzarAlex"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -176,7 +176,7 @@
                             android:gravity="center_horizontal" >
 
                             <TextView
-                                android:id="@+id/textView1"
+                                android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
@@ -190,7 +190,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
-                                android:layout_below="@+id/textView1"
+                                android:layout_below="@+id/tv1"
                                 android:text="Album:Entre tus alas         "
                                 android:textAppearance="?android:attr/textAppearanceSmall" 
                                 android:textSize="12sp"/>
@@ -218,11 +218,11 @@
                         </RelativeLayout>
 
                         <ImageButton
-                            android:id="@+id/imageButton1"
+                            android:id="@+id/btnPlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:onClick="ejecutarCamila"
+                            android:onClick="lanzarCamila"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -255,7 +255,7 @@
                             android:gravity="center_horizontal" >
 
                             <TextView
-                                android:id="@+id/textView1"
+                                android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
@@ -269,7 +269,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
-                                android:layout_below="@+id/textView1"
+                                android:layout_below="@+id/tv1"
                                 android:text="Album: Meteora                  "
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:textSize="12sp" />
@@ -296,12 +296,13 @@
 
                         </RelativeLayout>
 
+                        
                         <ImageButton
-                            android:id="@+id/imageButton1"
+                            android:id="@+id/btnPlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:onClick="ejecutarLinking"
+                            android:onClick="lanzarLinking"
                             android:src="@drawable/play" />
 
                     </LinearLayout>
@@ -334,7 +335,7 @@
                             android:gravity="center_horizontal" >
 
                             <TextView
-                                android:id="@+id/textView1"
+                                android:id="@+id/tv1"
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
@@ -348,7 +349,7 @@
                                 android:layout_width="wrap_content"
                                 android:layout_height="wrap_content"
                                 android:layout_alignParentLeft="true"
-                                android:layout_below="@+id/textView1"
+                                android:layout_below="@+id/tv1"
                                 android:text="Album: Te fuiste de aqui  "
                                 android:textAppearance="?android:attr/textAppearanceSmall"
                                 android:textSize="12sp" />
@@ -376,11 +377,11 @@
                         </RelativeLayout>
 
                         <ImageButton
-                            android:id="@+id/imageButton1"
+                            android:id="@+id/btnPlay"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:layout_gravity="center_vertical"
-                            android:onClick="ejecutarReik"
+                            android:onClick="lanzarReik"
                             android:src="@drawable/play" />
 
                     </LinearLayout>

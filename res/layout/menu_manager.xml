@@ -39,8 +39,8 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/textView1"
-        android:layout_below="@+id/textView1"
+        android:layout_alignRight="@+id/tv1"
+        android:layout_below="@+id/tv1"
         android:layout_marginTop="27dp"
         android:drawableTop="@drawable/gestionar_musica"
         android:onClick="gestionarCanciones"
@@ -54,13 +54,13 @@
         android:layout_height="wrap_content"
         android:layout_alignBaseline="@+id/gestionarMusica"
         android:layout_alignBottom="@+id/gestionarMusica"
-        android:layout_alignLeft="@+id/textView1"
+        android:layout_alignLeft="@+id/tv1"
         android:drawableTop="@drawable/icono_perfil"
         android:text="Perfil"
         android:textColor="@color/blanco" />
 
     <TextView
-        android:id="@+id/textView1"
+        android:id="@+id/tv1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"

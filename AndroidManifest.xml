@@ -59,6 +59,7 @@
                 android:value="com.example.misitiomusical.GestionarCanciones" />
         </activity>
         <activity android:name="ContraOlvidada"></activity>
+        <activity android:name="reproductorAudio"></activity>
     </application>
 
 </manifest>
