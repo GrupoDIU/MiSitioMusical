@@ -10,55 +10,6 @@
     android:background="@drawable/fondo_musica"
     >
 
-    <Button
-        android:id="@+id/buttonVerNovedades"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/buttonGestionarAlbumes"
-        android:layout_alignBottom="@+id/buttonGestionarAlbumes"
-        android:layout_alignRight="@+id/gestionarMusica"
-        android:drawableTop="@drawable/icono_novedades"
-        android:text="Novedades"
-         />
-
-    <Button
-        android:id="@+id/buttonGestionarAlbumes"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/buttonVerPerfil"
-        android:layout_below="@+id/buttonVerPerfil"
-        android:layout_marginTop="44dp"
-        android:drawableTop="@drawable/icono_amigos"
-        android:text="Amigos"
-       />
-
-    <Button
-        android:id="@+id/gestionarMusica"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignRight="@+id/tv1"
-        android:layout_below="@+id/tv1"
-        android:layout_marginTop="27dp"
-        android:drawableTop="@drawable/icono_canciones"
-        android:onClick="gestionarCanciones"
-        android:text="Musica"
-        />
-
-    <Button
-        android:id="@+id/buttonVerPerfil"
-        style="?android:attr/buttonStyleSmall"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_alignBaseline="@+id/gestionarMusica"
-        android:layout_alignBottom="@+id/gestionarMusica"
-        android:layout_alignLeft="@+id/tv1"
-        android:drawableTop="@drawable/icono_perfil"
-        android:text="Perfil"
-        />
-
     <TextView
         android:id="@+id/tv1"
         android:layout_width="wrap_content"
@@ -69,5 +20,52 @@
         android:text="Bienvenido! usuario: manager"
         android:textColor="@color/lime"
         android:textSize="20dp" />
+
+    <Button
+        android:id="@+id/gestionarMusica"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonVerConciertos"
+        android:layout_alignBottom="@+id/buttonVerConciertos"
+        android:layout_alignLeft="@+id/tv1"
+        android:drawableTop="@drawable/icono_canciones"
+        android:onClick="gestionarCanciones"
+        android:text="Musica" />
+
+    <Button
+        android:id="@+id/buttonVerConciertos"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/buttonVerNovedades"
+        android:layout_below="@+id/tv1"
+        android:layout_marginTop="29dp"
+        android:drawableTop="@drawable/concierto_musica"
+        android:text="Conciertos"
+        android:onClick="gestionarConciertos"
+         />
+
+    <Button
+        android:id="@+id/buttonVerNovedades"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/buttonGestionarAlbumes"
+        android:layout_alignBottom="@+id/buttonGestionarAlbumes"
+        android:layout_alignRight="@+id/tv1"
+        android:drawableTop="@drawable/icono_novedades"
+        android:text="Novedades" />
+
+    <Button
+        android:id="@+id/buttonGestionarAlbumes"
+        style="?android:attr/buttonStyleSmall"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/gestionarMusica"
+        android:layout_below="@+id/gestionarMusica"
+        android:layout_marginTop="70dp"
+        android:drawableTop="@drawable/icono_amigos"
+        android:text="Amigos" />
 
 </RelativeLayout>

@@ -19,5 +19,7 @@
     <string name="title_activity_gestionar_canciones">GestionarCanciones</string>
     <string name="title_activity_agregar_cancion">MainActivity</string>
     <string name="title_activity_busqueda_avanzada">MainActivity</string>
+    <string name="action_salir">Salir</string>
+    <string name="title_activity_gestionar_conciertos">GestionarConciertos</string>
 
 </resources>

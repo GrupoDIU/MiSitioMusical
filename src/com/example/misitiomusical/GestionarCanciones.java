@@ -261,6 +261,10 @@ public class GestionarCanciones extends Activity {
 		  case R.id.action_busqueda_avanzada:
 			  busquedaAvanzada();
 			  return true;
+		  case R.id.action_salir1:
+			  System.exit(0);
+			  finish();
+			  return true;
 		  default:
 			  return super.onOptionsItemSelected(item);
 		}

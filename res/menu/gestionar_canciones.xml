@@ -21,4 +21,10 @@
         android:title="Actualizar"
         android:icon="@drawable/icono_actualizar"
         />
+	<item
+        android:id="@+id/action_salir1"
+        android:orderInCategory="100"
+        android:showAsAction="never"
+        android:icon="@android:drawable/ic_menu_close_clear_cancel"
+        android:title="@string/action_salir"/>
 </menu>
