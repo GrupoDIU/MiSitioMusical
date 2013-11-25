@@ -1,13 +1,28 @@
 package com.example.misitiomusical;
 
+
 import android.app.Activity;
 import android.media.MediaPlayer;
 import android.os.Bundle;
+import android.os.Handler;
 import android.view.View;
-import android.widget.EditText;
+import android.view.View.OnClickListener;
+import android.widget.Button;
+import android.widget.ImageButton;
+import android.widget.SeekBar;
 import android.widget.TextView;
 
-public class reproductorAudio extends Activity {
+public class reproductorAudio extends Activity implements OnClickListener{
+	
+	
+	SeekBar seek_bar;
+    ImageButton play_button, pause_button;
+    MediaPlayer player;
+    TextView text_shown;
+    private Handler seekHandler = new Handler();
+    
+   
+	
 	String pista;
 	MediaPlayer mp;
     //Button b1;
@@ -22,87 +37,76 @@ public class reproductorAudio extends Activity {
 		// TODO Auto-generated method stub
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.reproduccionaudio);
-		
 		Bundle bundle = getIntent().getExtras();
         pista=bundle.getString("direccion");
         tit = (TextView) findViewById(R.id.tv1);
-        tit.setText(pista);
+        tit.setText(pista);		
+		getInit();
+        seekUpdation();
+		
+		
+		
+		
+		
         
 	}
 	
 	
-	//aqui configuro los botones del reproductor
 	
-	//Aca comienza el codigo para usar mi propio reproductor de audio
+	//cambios
+	public void getInit() {
+        seek_bar = (SeekBar) findViewById(R.id.seek_bar);
+        play_button = (ImageButton) findViewById(R.id.play_button);
+        pause_button = (ImageButton) findViewById(R.id.pause_button);
+        text_shown = (TextView) findViewById(R.id.text_shown);
+        play_button.setOnClickListener(this);
+        pause_button.setOnClickListener(this);
+        if(pista.equals("detras_de_un_cristal")){
+        	player = MediaPlayer.create(this, R.raw.detras_de_un_cristal);
+        }else if(pista.equals("entre_tus_alas")){       	
+        	player = MediaPlayer.create(this, R.raw.entre_tus_alas);	        
+        }else if(pista.equals("foreword")){        	
+        	player = MediaPlayer.create(this, R.raw.foreword);	       
+        }else if(pista.equals("te_fuiste_de_aqui")){        	
+        	player = MediaPlayer.create(this, R.raw.te_fuiste_de_aqui);	       
+        }
+        seek_bar.setMax(player.getDuration());
+ 
+    }
 	
-		public void destruir() {
-	        if (mp != null)
-	            mp.release();
-	    }
+	Runnable run = new Runnable() {
+		 
+        @Override
+        public void run() {
+            seekUpdation();
+        }
+    };
 
-	    public void iniciar(View v) {
-	        destruir();
-	        if(pista.equals("detras_de_un_cristal") && iniciado==false){
-	        	iniciado=true;
-	        	mp = MediaPlayer.create(this, R.raw.detras_de_un_cristal);
-		        mp.start();
-	        }else if(pista.equals("entre_tus_alas") && iniciado==false){
-	        	iniciado=true;
-	        	mp = MediaPlayer.create(this, R.raw.entre_tus_alas);
-		        mp.start();
-	        }else if(pista.equals("foreword") && iniciado==false){
-	        	iniciado=true;
-	        	mp = MediaPlayer.create(this, R.raw.foreword);
-		        mp.start();	
-	        }else if(pista.equals("te_fuiste_de_aqui") && iniciado==false){
-	        	iniciado=true;
-	        	mp = MediaPlayer.create(this, R.raw.te_fuiste_de_aqui);
-		        mp.start();
-	        }else if (mp != null && mp.isPlaying() == false && iniciado==true) {
-	            mp.seekTo(posicion);
-	            mp.start();
+
+    public void seekUpdation() {
+    	 
+        seek_bar.setProgress(player.getCurrentPosition());
+       
+        seekHandler.postDelayed(run, 1000);
+    }
+	
+	
+
+		@Override
+		public void onClick(View view) {
+			switch (view.getId()) {
+	        case R.id.play_button:
+	            text_shown.setText("Tocando");
+	            player.start();
+	            break;
+	        case R.id.pause_button:
+	            player.pause();
+	            text_shown.setText("Pausado");
 	        }
-	        
-	        
-	       
-	            mp.setLooping(false);
-	        
-	    }
+			
+		}
 
-	    public void pausar(View v) {
-	    	
-	        if (mp != null && mp.isPlaying()) {
-	        	iniciado=true;
-	            posicion = mp.getCurrentPosition();
-	            mp.pause();
-	        }
-	    }
-
-	    public void continuar(View v) {
-	        if (mp != null && mp.isPlaying() == false) {
-	            mp.seekTo(posicion);
-	            mp.start();
-	        }
-	    }
-
-	    public void detener(View v) {
-	        if (mp != null) {
-	        	iniciado=false;
-	            mp.stop();
-	            posicion = 0;
-	        }
-	    }
-
-	   /* public void circular(View v) {
-	        detener(null);
-	        String op = b1.getText().toString();
-	        if (op.equals("No reproducir en forma circular"))
-	            b1.setText("reproducir en forma circular");
-	        else
-	            b1.setText("No reproducir en forma circular");
-	    }  */
-	    
-	    //aqui termina el codigo para reproducir audio con mi propio reproductor
+	
 		
 
 }

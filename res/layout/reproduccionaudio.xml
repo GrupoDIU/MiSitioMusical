@@ -12,50 +12,57 @@
         android:layout_margin="20dp"
         android:text="TextView"
         android:textColor="@color/blanco"
-        android:textSize="22sp" />
+        android:textSize="25sp" />
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_margin="5dp"
+        android:layout_margin="12dp"
         android:layout_marginRight="20dp"
         android:orientation="vertical" >
 
+        <TextView
+            android:id="@+id/text_shown"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="25dp"
+            android:layout_marginRight="10dp"
+            android:textColor="@color/negro"
+            android:textSize="20sp" />
+
         <SeekBar
-            android:id="@+id/seekBar1"
+            android:id="@+id/seek_bar"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_margin="5dp" />
-
     </LinearLayout>
 
-    <LinearLayout
-        android:layout_width="wrap_content"
+    <RelativeLayout
+        android:id="@+id/RelativeLayout1"
+        android:layout_width="fill_parent"
         android:layout_height="wrap_content"
-        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"
         android:layout_marginTop="20dp" >
 
         <ImageButton
-            android:id="@+id/btnPausa"
+            android:id="@+id/play_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="pausar"
-            android:src="@drawable/pausa" />
-
-        <ImageButton
-            android:id="@+id/btnPlay"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
+            android:layout_alignBaseline="@+id/pause_button"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
             android:onClick="iniciar"
             android:src="@drawable/play2" />
 
         <ImageButton
-            android:id="@+id/btnDetener"
+            android:id="@+id/pause_button"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:onClick="detener"
-            android:src="@drawable/detener" />
+            android:layout_alignParentRight="true"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/pausa" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
 </LinearLayout>
