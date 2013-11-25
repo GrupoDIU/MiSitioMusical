@@ -15,6 +15,7 @@ public class Lista_entrada_canciones implements Serializable{
 	public Lista_entrada_canciones ( String textoEncima, String textoDebajo) { 
 	    this.textoEncima = textoEncima; 
 	    this.textoDebajo = textoDebajo; 
+	    
 	}
 	/*
 	public Lista_entrada_canciones(Parcel source){

@@ -7,7 +7,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".MenuManagerActivity" 
-    android:background="@drawable/musica_bajo_el_mar"
+    android:background="@drawable/fondo_musica"
     >
 
     <Button
@@ -20,7 +20,7 @@
         android:layout_alignRight="@+id/gestionarMusica"
         android:drawableTop="@drawable/icono_novedades"
         android:text="Novedades"
-        android:textColor="@color/blanco" />
+         />
 
     <Button
         android:id="@+id/buttonGestionarAlbumes"
@@ -32,7 +32,7 @@
         android:layout_marginTop="44dp"
         android:drawableTop="@drawable/icono_amigos"
         android:text="Amigos"
-        android:textColor="@color/blanco" />
+       />
 
     <Button
         android:id="@+id/gestionarMusica"
@@ -42,10 +42,10 @@
         android:layout_alignRight="@+id/tv1"
         android:layout_below="@+id/tv1"
         android:layout_marginTop="27dp"
-        android:drawableTop="@drawable/gestionar_musica"
+        android:drawableTop="@drawable/icono_canciones"
         android:onClick="gestionarCanciones"
         android:text="Musica"
-        android:textColor="@color/blanco" />
+        />
 
     <Button
         android:id="@+id/buttonVerPerfil"
@@ -57,7 +57,7 @@
         android:layout_alignLeft="@+id/tv1"
         android:drawableTop="@drawable/icono_perfil"
         android:text="Perfil"
-        android:textColor="@color/blanco" />
+        />
 
     <TextView
         android:id="@+id/tv1"
