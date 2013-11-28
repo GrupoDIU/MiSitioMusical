@@ -5,6 +5,7 @@ import java.util.ArrayList;
 import android.media.MediaPlayer;
 import android.os.Bundle;
 import android.app.Activity;
+import android.content.Intent;
 import android.view.Menu;
 import android.view.View;
 import android.widget.AdapterView;
@@ -39,9 +40,9 @@ public class GestionarConciertos extends Activity {
 			@Override
 			public void onEntrada(Object entrada, View view) {
 		        if (entrada != null) {
-		            TextView nombreCanciones = (TextView) view.findViewById(R.id.nombre_concierto); 
-		            if (nombreCanciones != null) 
-		            	nombreCanciones.setText(((Lista_entrada_conciertos) entrada).getNombreConcierto()); 
+		            TextView nombreConcierto = (TextView) view.findViewById(R.id.nombre_concierto); 
+		            if (nombreConcierto != null) 
+		            	nombreConcierto.setText(((Lista_entrada_conciertos) entrada).getNombreConcierto()); 
 		              
 		            TextView numeroFotos = (TextView) view.findViewById(R.id.numero_fotos); 
 		            if (numeroFotos != null)
@@ -53,8 +54,13 @@ public class GestionarConciertos extends Activity {
 		        }
 			}
 		});
-        
-        
+        lista.setOnItemClickListener(new OnItemClickListener() { 
+			@Override
+			public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
+				Intent intent =new Intent(view.getContext(),ConciertoActivity.class);
+				startActivity(intent);
+			}
+        });
 	}
 
 	@Override

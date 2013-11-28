@@ -113,10 +113,12 @@ public class GestionarCanciones extends Activity {
 	protected void cargarListaCanciones() {
 		datosCanciones = new ArrayList<Lista_entrada_canciones>();  
 		
-		datosCanciones.add(new Lista_entrada_canciones("una rosa en la playa", "Duracion: 5:00 min"));
+		datosCanciones.add(new Lista_entrada_canciones("una rosa en la playa", "Duracion: 3:00 min"));
         datosCanciones.add(new Lista_entrada_canciones( "estoy loco loco", "Duracion: 4:30 min"));
-        datosCanciones.add(new Lista_entrada_canciones( "muero por ti", "Duracion: 4:00 min"));
-        datosCanciones.add(new Lista_entrada_canciones( "suicida", "Duracion: 3:30 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "detras de un cristal", "Duracion: 4:00 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "entre tus alas", "Duracion: 3:30 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "foreward", "Duracion: 3:00 min"));
+        datosCanciones.add(new Lista_entrada_canciones( "Te fuiste de aqui", "Duracion: 3:00 min"));
        
         lista = (ListView) findViewById(R.id.tabListaCanciones);
         
@@ -149,6 +151,22 @@ public class GestionarCanciones extends Activity {
                 }
                 else if(elegido.get_textoEncima().equalsIgnoreCase("estoy loco loco")){
                 	mp = MediaPlayer.create(getApplicationContext(), R.raw.locoloco);
+                    mp.start();
+                }
+                else if(elegido.get_textoEncima().equalsIgnoreCase("detras de un cristal")){
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.detras_de_un_cristal);
+                    mp.start();
+                }
+                else if(elegido.get_textoEncima().equalsIgnoreCase("entre tus alas")){
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.entre_tus_alas);
+                    mp.start();
+                }
+                else if(elegido.get_textoEncima().equalsIgnoreCase("foreword")){
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.foreword);
+                    mp.start();
+                }
+                else if(elegido.get_textoEncima().equalsIgnoreCase("te fuiste de aqui")){
+                	mp = MediaPlayer.create(getApplicationContext(), R.raw.te_fuiste_de_aqui);
                     mp.start();
                 }
                 CharSequence texto = "Seleccionado: " + elegido.get_textoDebajo();

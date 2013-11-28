@@ -21,5 +21,6 @@
     <string name="title_activity_busqueda_avanzada">MainActivity</string>
     <string name="action_salir">Salir</string>
     <string name="title_activity_gestionar_conciertos">GestionarConciertos</string>
+    <string name="title_activity_concierto">Concierto</string>
 
 </resources>

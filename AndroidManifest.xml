@@ -66,6 +66,14 @@
             android:name="com.example.misitiomusical.GestionarConciertos"
             android:label="@string/title_activity_gestionar_conciertos" >
         </activity>
+        <activity
+            android:name="com.example.misitiomusical.ConciertoActivity"
+            android:label="@string/title_activity_concierto"
+            android:parentActivityName="com.example.misitiomusical.GestionarConciertos" >
+            <meta-data
+                android:name="android.support.PARENT_ACTIVITY"
+                android:value="com.example.misitiomusical.GestionarConciertos" />
+        </activity>
     </application>
 
 </manifest>
