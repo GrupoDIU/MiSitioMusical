@@ -11,11 +11,14 @@ import android.view.MenuItem;
 import android.view.MotionEvent;
 import android.view.View;
 import android.view.View.OnClickListener;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 import android.widget.Toast;
 import android.support.v4.app.NavUtils;
 import android.annotation.TargetApi;
+import android.graphics.Color;
 import android.os.Build;
 
 public class ConciertoActivity extends Activity implements OnClickListener{
@@ -30,16 +33,33 @@ public class ConciertoActivity extends Activity implements OnClickListener{
             R.drawable.image3};
     private int mPhoto;
     private RelativeLayout mView;
-    
+    TextView informacionFoto;
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.concierto);
-		
 		// Show the Up button in the action bar.
 		setupActionBar();
-		
+		Bundle bundle=getIntent().getExtras();
+		String fecha=bundle.getString(GestionarConciertos.txtFecha);
+		String lugar=bundle.getString(GestionarConciertos.txtLugar);
+		String concierto=bundle.getString(GestionarConciertos.txtConcierto);
+		informacionFoto=(TextView)findViewById(R.id.textViewInformacionFoto);
+		TextView nombreConcierto=(TextView)findViewById(R.id.textViewNombreConcierto);
+		EditText fechaConcierto=(EditText)findViewById(R.id.editTextFechaConcierto);
+		EditText lugarConcierto=(EditText)findViewById(R.id.editTextLugarConcierto);
+		nombreConcierto.setText(concierto);
+		fechaConcierto.setKeyListener(null);
+		fechaConcierto.setText(fecha);
+		fechaConcierto.setBackgroundColor(Color.GRAY);
+		lugarConcierto.setKeyListener(null);
+		lugarConcierto.setText(lugar);
+		lugarConcierto.setBackgroundColor(Color.GRAY);
 		mPhoto=0;
+		int nroFoto=mPhoto+1;
+		//Por defecto seteamos este valor
+		informacionFoto.setText("Foto "+nroFoto+" de "+mImagesList.length);
+		
 		mView=(RelativeLayout)findViewById(R.id.relativeLayoutConcierto);
 		mImageView=(ImageView)findViewById(R.id.imageViewConcierto);
 		
@@ -127,6 +147,33 @@ public class ConciertoActivity extends Activity implements OnClickListener{
 	@Override
 	public void onClick(View arg0) {
 		// TODO Auto-generated method stub
+	}
+	public void siguienteImagen(View view){
+		int size=mImagesList.length;
+		Log.i("Tamanio: ",size+"");
+		
+			mPhoto++;
+			if(mPhoto==size)
+				mPhoto=0;
+			mImageView.setImageResource(mImagesList[mPhoto]);
+			int nroFoto=mPhoto+1;
+			informacionFoto.setText("Foto "+nroFoto+" de "+mImagesList.length);
+			//Toast toast = Toast.makeText(getApplicationContext(), "Foto "+nroFoto+" de "+mImagesList.length, 3);
+	    	//toast.show();
+		
+	}
+	public void anteriorImagen(View view){
+		int size=mImagesList.length;
+		
+		
+		mPhoto--;
+		if(mPhoto==-1)
+			mPhoto=size-1;
+		mImageView.setImageResource(mImagesList[mPhoto]);
+		int nroFoto=mPhoto+1;
+		informacionFoto.setText("Foto "+nroFoto+" de "+mImagesList.length);
+		//Toast toast = Toast.makeText(getApplicationContext(), "Foto "+nroFoto+" de "+mImagesList.length, 3);
+	    //toast.show();
 		
 	}
 

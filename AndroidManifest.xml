@@ -58,10 +58,9 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.misitiomusical.GestionarCanciones" />
         </activity>
-        <activity android:name="com.example.misitiomusical.ContraOlvidada" >
-        </activity>
-        <activity android:name="com.example.misitiomusical.reproductorAudio" >
-        </activity>
+
+        <activity android:name="com.example.misitiomusical.ContraOlvidada" ></activity>
+        <activity android:name="com.example.misitiomusical.reproductorAudio" ></activity>
 
         <activity
             android:name="com.example.misitiomusical.GestionarConciertos"
@@ -75,6 +74,7 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.example.misitiomusical.GestionarConciertos" />
         </activity>
+
         <activity android:name="MensajeDeConfirmacion"></activity>
         <activity android:name="MensajeDeConfirmacion2"></activity>
         <activity android:name="RecuperaCuenta"></activity>

@@ -8,65 +8,28 @@
 
     <EditText
         android:id="@+id/etUsuario"
-        android:layout_width="152dp"
+        android:layout_width="228dp"
         android:layout_height="wrap_content"
-        android:layout_x="146dp"
+        android:layout_x="73dp"
         android:layout_y="72dp"
         android:ems="10"
         android:onClick="cambiarFecha" />
 
-    <TextView
-        android:id="@+id/textViewFecha"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="11dp"
-        android:layout_y="87dp"
-        android:text="Fecha(creacion): "
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/TextView01"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="12dp"
-        android:layout_y="37dp"
-        android:text="Genero: "
-        android:textSize="15dp" />
-
     <Spinner
         android:id="@+id/SpinnerGeneroBuscar"
-        android:layout_width="202dp"
+        android:layout_width="224dp"
         android:layout_height="29dp"
-        android:layout_x="94dp"
+        android:layout_x="76dp"
         android:layout_y="34dp"
-        android:background="@color/blanco"
-        android:popupBackground="@color/blanco"
-        android:textColor="@color/negro" />
-
-    <TextView
-        android:id="@+id/textViewAlbum"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="16dp"
-        android:layout_y="140dp"
-        android:text="Album: "
-        android:textSize="15dp" />
-
-    <Spinner
-        android:id="@+id/spinnerAlbumesBuscar"
-        android:layout_width="202dp"
-        android:layout_height="29dp"
-        android:layout_x="94dp"
-        android:layout_y="136dp"
         android:background="@color/blanco"
         android:popupBackground="@color/blanco"
         android:textColor="@color/negro" />
 
     <AutoCompleteTextView
         android:id="@+id/autoCompleteTextView1"
-        android:layout_width="wrap_content"
+        android:layout_width="227dp"
         android:layout_height="wrap_content"
-        android:layout_x="91dp"
+        android:layout_x="79dp"
         android:layout_y="186dp"
         android:ems="10"
         android:hint="Ingresar cancion"
@@ -79,15 +42,6 @@
         android:layout_x="14dp"
         android:layout_y="197dp"
         android:text="Cancion: "
-        android:textSize="15dp" />
-
-    <TextView
-        android:id="@+id/textViewCalificacion"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_x="13dp"
-        android:layout_y="263dp"
-        android:text="Calificacion: "
         android:textSize="15dp" />
 
     <RatingBar
@@ -109,4 +63,51 @@
         android:text="Buscar"
         android:onClick="buscarCanciones"
          />
+
+    <TextView
+        android:id="@+id/textViewCalificacion"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="14dp"
+        android:layout_y="255dp"
+        android:text="Calificacion: "
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/TextView01"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="14dp"
+        android:layout_y="40dp"
+        android:text="Genero: "
+        android:textSize="15dp" />
+
+    <Spinner
+        android:id="@+id/spinnerAlbumesBuscar"
+        android:layout_width="215dp"
+        android:layout_height="29dp"
+        android:layout_x="82dp"
+        android:layout_y="125dp"
+        android:background="@color/blanco"
+        android:popupBackground="@color/blanco"
+        android:textColor="@color/negro" />
+
+    <TextView
+        android:id="@+id/textViewFecha"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="16dp"
+        android:layout_y="89dp"
+        android:text="Fecha: "
+        android:textSize="15dp" />
+
+    <TextView
+        android:id="@+id/textViewAlbum"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_x="16dp"
+        android:layout_y="138dp"
+        android:text="Album: "
+        android:textSize="15dp" />
+
 </AbsoluteLayout>

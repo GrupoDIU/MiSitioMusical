@@ -12,30 +12,6 @@
     >
 
     <LinearLayout
-        android:id="@+id/linearLayout1lala"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/textViewNombreConcierto"
-        android:layout_below="@+id/textViewNombreConcierto"
-        android:layout_marginTop="20dp" >
-
-        <TextView
-            android:id="@+id/textViewFechaConcierto"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Fecha: " />
-
-        <EditText
-            android:id="@+id/editTextFechaConcierto"
-            android:layout_width="159dp"
-            android:layout_height="wrap_content"
-            android:layout_weight="0.29" >
-
-            <requestFocus />
-        </EditText>
-    </LinearLayout>
-
-    <LinearLayout
         android:id="@+id/linearLayout2lala"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -50,7 +26,7 @@
             android:text="Lugar: " />
 
         <EditText
-            android:id="@+id/editTextLugar"
+            android:id="@+id/editTextLugarConcierto"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_weight="1" />
@@ -72,28 +48,78 @@
             android:text="Fotos:" />
     </LinearLayout>
 
+    <LinearLayout
+        android:id="@+id/linearLayout1lala"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_alignLeft="@+id/textViewNombreConcierto"
+        android:layout_below="@+id/textViewNombreConcierto" >
 
+        <TextView
+            android:id="@+id/textViewFechaConcierto"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Fecha: " />
+
+        <EditText
+            android:id="@+id/editTextFechaConcierto"
+            android:layout_width="159dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="0.29" />
+    </LinearLayout>
 
     <TextView
         android:id="@+id/textViewNombreConcierto"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
-        android:layout_centerHorizontal="true"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"
         android:text="NOMBRE DE CONCIERTO"
         android:textAppearance="?android:attr/textAppearanceLarge"
         android:textColor="@color/yellow" />
 
+    <ImageButton
+        android:id="@+id/imageButton1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/imageButton2"
+        android:layout_marginLeft="20dp"
+        android:layout_toRightOf="@+id/linearLayout3"
+        android:src="@android:drawable/ic_media_rew"
+        android:onClick="anteriorImagen"
+         />
+
     <ImageView
         android:id="@+id/imageViewConcierto"
-        android:layout_width="140dp"
-        android:layout_height="140dp"
-        android:layout_below="@+id/linearLayout3"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_below="@+id/imageButton2"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="28dp"
         android:adjustViewBounds="true"
         android:scaleType="fitXY"
-        android:src="@drawable/imagen_defecto_concierto" />
+        android:src="@drawable/imagen_defecto_concierto"
+         />
+
+    <ImageButton
+        android:id="@+id/imageButton2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignRight="@+id/imageViewConcierto"
+        android:layout_alignTop="@+id/linearLayout3"
+        android:layout_marginRight="14dp"
+        android:src="@android:drawable/ic_media_ff"
+        android:onClick="siguienteImagen"
+         />
+
+    <TextView
+        android:id="@+id/textViewInformacionFoto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/imageViewConcierto"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/blanco"
+        android:layout_marginTop="16dp" />
 
 </RelativeLayout>

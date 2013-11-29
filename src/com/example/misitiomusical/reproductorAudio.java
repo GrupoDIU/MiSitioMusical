@@ -70,6 +70,14 @@ public class reproductorAudio extends Activity implements OnClickListener{
         }else if(pista.equals("te_fuiste_de_aqui")){        	
         	player = MediaPlayer.create(this, R.raw.te_fuiste_de_aqui);	       
         }
+        else if(pista.equals("locoloco")){        	
+        	player = MediaPlayer.create(this, R.raw.locoloco);	       
+        }
+        else if(pista.equals("rosa_playa")){        	
+        	player = MediaPlayer.create(this, R.raw.rosa_playa);	       
+        }
+
+        
         seek_bar.setMax(player.getDuration());
  
     }

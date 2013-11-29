@@ -17,6 +17,10 @@ import android.widget.AdapterView.OnItemClickListener;
 
 public class GestionarConciertos extends Activity {
 
+	public static final String txtFecha="fechaConcierto";
+	public static final String txtLugar="lugarConcierto";
+	public static final  String txtConcierto="nombreConcierto";
+
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -57,8 +61,18 @@ public class GestionarConciertos extends Activity {
         lista.setOnItemClickListener(new OnItemClickListener() { 
 			@Override
 			public void onItemClick(AdapterView<?> pariente, View view, int posicion, long id) {
+				Lista_entrada_conciertos elegido = (Lista_entrada_conciertos) pariente.getItemAtPosition(posicion); 
+				
 				Intent intent =new Intent(view.getContext(),ConciertoActivity.class);
+				Bundle bundle = new Bundle();
+				
+				//if(tabHost.getTabWidget().getTabCount()==0)
+				bundle.putString(txtConcierto, elegido.getNombreConcierto());
+				bundle.putString(txtFecha, "15/06/2013");
+				bundle.putString(txtLugar, "Explanada de San Marcos");
+				intent.putExtras(bundle);
 				startActivity(intent);
+				
 			}
         });
 	}
