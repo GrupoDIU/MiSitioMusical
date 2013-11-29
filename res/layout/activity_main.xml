@@ -20,26 +20,24 @@
         android:layout_marginTop="17dp"
         android:orientation="vertical" >
 
-		
-
         <TextView
             android:id="@+id/textViewGestionarCanciones"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center"
-            android:layout_marginBottom="10dp"
+            android:layout_marginBottom="5dp"
+            android:drawableRight="@drawable/iniciar_sesion"
             android:text="Iniciar sesion"
             android:textAppearance="?android:attr/textAppearanceLarge"
-            android:textColor="@color/blanco"
-            android:drawableRight="@drawable/iniciar_sesion"
-             />
+            android:textColor="@color/blanco" />
 
         <EditText
             android:id="@+id/etNombreUsuario"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:ems="5"
-            android:hint="@string/editTextUsuario"
+            android:hint="Usuario"
+            android:inputType="text"
             android:textColor="@color/negro"
             android:textColorHint="@color/lime" >
 
@@ -50,21 +48,20 @@
             android:id="@+id/etContrasenia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:layout_marginBottom="15dp"
-            android:layout_marginTop="10dp"
+            android:layout_marginBottom="10dp"
+            android:layout_marginTop="5dp"
             android:ems="5"
-            android:hint="@string/editTextClave"
+            android:hint="Contraseña"
             android:inputType="textPassword"
             android:textColor="@color/negro"
-            android:textColorHint="@color/lime"
-            />
+            android:textColorHint="@color/lime" />
 
         <Button
             android:id="@+id/gestionarMusica"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"
-            android:layout_marginBottom="5dp"
+            android:layout_marginBottom="30dp"
             android:onClick="ingresarMenuPrincipal"
             android:text="Aceptar" />
 
@@ -72,8 +69,8 @@
             android:id="@+id/buttonVerPerfil"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:layout_marginBottom="5dp"
+            android:layout_weight="1.17"
             android:onClick="lanzar"
             android:text="Registrate" />
 
@@ -81,7 +78,6 @@
             android:id="@+id/button1"
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
-            android:layout_gravity="center_horizontal"
             android:onClick="lanzar2"
             android:text="¿Olvido su contraseña?" />
 
