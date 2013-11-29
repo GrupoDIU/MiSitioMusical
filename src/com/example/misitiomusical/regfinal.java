@@ -50,11 +50,9 @@ public class regfinal extends Activity {
                     Toast.LENGTH_SHORT);
             t.show(); 
         }else{
-        	/*Toast t2 = Toast.makeText(this, "Bienvenido a mi sitio Musical",
-                    Toast.LENGTH_SHORT);
-        	t2.show();  */
         	
-        	Intent i = new Intent(this, reproducirm.class );
+        	
+        	Intent i = new Intent(this, MensajeDeConfirmacion2.class );
 	        startActivity(i);
         }
 	}

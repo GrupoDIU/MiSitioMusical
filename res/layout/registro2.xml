@@ -27,6 +27,7 @@
             android:id="@+id/etNombreUsuario"
             android:layout_width="235dp"
             android:layout_height="wrap_content"
+            android:maxLength="12"
             android:ems="10" >
 
             <requestFocus />
@@ -43,6 +44,7 @@
             android:id="@+id/etContrasenia"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
+            android:maxLength="12"
             android:ems="10"
             android:inputType="textPassword" />
 
@@ -54,7 +56,7 @@
         android:layout_gravity="center_horizontal" >
 
         <Button
-            android:id="@+id/button1"
+            android:id="@+id/btnAceptar_cuenta"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_gravity="center_horizontal"

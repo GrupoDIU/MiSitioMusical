@@ -1,6 +1,7 @@
 package com.example.misitiomusical;
 
 import android.app.Activity;
+import android.app.Dialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
@@ -65,7 +66,12 @@ public class regmanager extends Activity {
         }
 		else{
 			
-			/*Toast t = Toast.makeText(this, "Bienvenido a mi Sitio Musical",
+			/*Dialog d =new Dialog(this);
+			d.setTitle("Confirmacion de cuenta");
+			d.setContentView(R.layout.mensaje_confirmacion);
+			d.show();
+			
+			Toast t = Toast.makeText(this, "Bienvenido a mi Sitio Musical",
                     Toast.LENGTH_SHORT);
             t.show();
 			
@@ -73,7 +79,7 @@ public class regmanager extends Activity {
 	     i.putExtra("cuenta", "manager");
 	     startActivity(i); */
 	     
-	     Intent i = new Intent(this, MenuManagerActivity.class );
+	     Intent i = new Intent(this, MensajeDeConfirmacion.class );
 	        startActivity(i);
 	     
         }

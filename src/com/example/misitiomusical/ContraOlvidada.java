@@ -27,7 +27,7 @@ public class ContraOlvidada extends Activity {
             t.show();
 		}else {
 			
-			        Intent i = new Intent(this, MainActivity.class );
+			        Intent i = new Intent(this, RecuperaCuenta.class );
 			        startActivity(i);
 			
 		}
